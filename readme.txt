@@ -1,5 +1,5 @@
 This repository contains all my programming coursework I've completed while
-attending the University of Colorado Denver.
+studying computer science at the University of Colorado Denver.
 
 Courses in order from freshman year on:
   - CSCI 1410 Fundamentals of Computing (C++)
