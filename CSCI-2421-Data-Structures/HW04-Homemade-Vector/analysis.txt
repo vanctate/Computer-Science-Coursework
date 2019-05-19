@@ -1,0 +1,35 @@
+Patrick Tate
+CSCI 2421
+HW 4
+
+Complexity Analysis of MyVector Functions
+
+[] Operator Overload:
+  - Overall Complexity: f(1) + f(1) + f(1) + f(1) = f(4)
+  - Big O = O(1) or constant time
+  - No part of this function is dependent on size n. The total adds up to f(4),
+  which is still constant time, so Big O is O(1), constant time. There are no
+  loops in this function, only variable assignments, an if statement, and a
+  print statement, each of which occurs once in constant time.
+
+push_back function:
+  - Overall complexity: f(1) + f(1) + f(1) + f(1) + f(1) + f(1) = f(6)
+  - Big O is O(1) or constant time
+  - While size is used as a comparison, time is not dependent on size. There
+  are no loops in this function, only variable assignments and if statements,
+  each of which happen once. The total adds up to f(6), which is constant time,
+  so overall time complexity Big O is O(1).
+
+pop_back function:
+  - Overall complexity: f(1)+f(1)+f(1)+f(1)+f(1)+f(n)+f(1)+f(1) = f(n) + f(7)
+  - Big O is O(n) or linear time because time is dependent on the highest order
+  function.
+  - If statements and variable assignments occur once, in constant time, but a
+  for loop to copy values is dependent on size n, which is linear time.
+
+search function:
+  - Overall complexity: f(1) + f(n) + f(1) + f(1) + f(1) = f(4) + f(n)
+  - Big O is O(n) or linear time
+  - Variable assignments and if statements occur once in constant time. There is
+  only one for loop, which is dependent on size n. The highest order determines
+  the overall time complexity of a function, so search is O(n) linear time.

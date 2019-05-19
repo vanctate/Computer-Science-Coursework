@@ -1,0 +1,20 @@
+Patrick Tate
+108350446
+CSCI 2421
+March 1st 2018
+
+Big O Analysis of insertFront and insertBack functions in LinkedList
+
+insertFront
+  - overall complexity: f(1) + f(1) + f(1) + f(1) + f(1) = f(5)
+  - Big O = O(1) constant time
+  - No part of this function is dependent on size. Inserting at the front relies
+  on five variable assignments, each of which happens once. The total function
+  complexity adds up to f(5), and the Big O is O(1) constant time.
+
+insertBack
+  - overall complexity: f(11) + f(n)
+  - Big O = O(n) linear time
+  - This function is dependent on size n to reach the end of the list. There
+  are 11 constant time assignments but Big O is determined by the highest order
+  function, so Big O = O(n) linear time.
