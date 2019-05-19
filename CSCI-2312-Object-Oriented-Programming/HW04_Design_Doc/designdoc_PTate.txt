@@ -1,0 +1,91 @@
+1) Title
+ - Single Player Battleship Game
+ - Patrick Tate
+ - 108350446
+ - 02/28/2018
+
+2) Problem Description
+  This program allows a user to play against a computer in the classic game of
+Battleship. The user and the computer both have 5 ships, each of different
+length, a ship of length 5 for example will take up 5 squares in the player's
+grid. Each player has a 10x10 grid hidden from their opponent where they place
+their ships. Once ships are placed, a turn consists of choosing a square within
+their opponents grid to "fire" a missile. If there is a ship in that location,
+it is counted as a hit, if a ship is hit in each square it resides in, the ship
+is sunk, the player whose entire fleet is sunk first loses.
+
+3) Overall Software Architecture
+  A base class of Player will have protected variables name, yourGrid, attackGrid,
+score, and 5 ships of the Watervehicle class. In addition to get/set functions,
+the base class player will also have fireTorpedo and placeShip functions. A User
+class and a Computer class will both inherit from the Player base class. Both
+User and Computer classes will redefine/override the fireTorpedo and placeShip
+functions because the User will read ship placements in from a csv file, and
+will manually enter row/column in the fireTorpedo function, while the Computer
+class will redefine the fireTorpedo and placeShip functions using rand values.
+Both User and Computer classes will inherit the five Watervehicle ships from the
+base class Player in a "has a" relationship.
+
+Class Diagram Explanation
+  Before the game can begin, the User object will read in the Watervehicle ship
+placements from a csv file, and check to ensure placements are valid. Once the
+User's ships are placed, the computer will use rand values to place its five
+Watervehicle ships. Both the User's and Computer's placeShip functions will take
+advantage of the Watervehicle functionality and checks, though their implementation
+will differ.
+  After both Players ships are placed, the game will begin. The User's grid and
+attackGrid will be displayed, and the user will enter a row and column to fire a
+torpedo, this is when the User's checkInput function will be used to validate.
+Once the shot placement is deemed legal, a check will be done to determine if
+the shot hit the a ship, if the ship was sunk, and if the User's score is
+equivalent to 17, ie the amount of hits needed to win. After the User's turn the
+computer will utilize rand values again to generate a torpedo shot. Once the shot
+is deemed legal checks will be done to determine if a ship was hit, if the ship
+was sunk, and if the Computer's score is equivalent to 17. Each player's turn
+will alternate until one player's score reaches 17.
+
+4) Input Requirements
+  - User's ship placement read in from csv file. Initially data in the csv file will
+  be read in using getline, and then string stream will be utilized to convert
+  location and orientation to int(0 = horizontal, 1 = vertical for example.)
+  - User's torpedo shots will be entered from the keyboard. Row will be an int
+  value from 1-10, and column will be a char from A-J which is then converted
+  to an int behind the scenes. Checks will be done to ensure values entered will
+  not be < 0 or > 10.
+
+5) Output Requirements
+  - The user's grid which shows their ship placements as well as the positions
+  the computer fired at will be continually displayed utilizing char values of
+  X for miss, O for hit, and H or V in the ship's location.
+  - The user's attack grid will also be displayed at each turn, utilizing the char
+  values mentioned above to show the user where they fired and if the shot was
+  successful.
+
+6) Problem Solution Discussion
+  - Ultimately each player's turn will be contained within a while loop that loops
+  until one player's score is equivalent to 17 or the user hits an escape key.
+  Each player's turn will be similar, but utilize different functions and checks
+  since the computer makes heavy use of rand functions while the user manually
+  inputs shot positions. Each input from the user is checked and must be deemed
+  legal before checks are done to see if a ship was hit, sunk, and if their score
+  is equivalent to 17.
+
+7) Classes, Inheritance, and Data Structures
+  - My base class is called Player, which will contain protected variables of
+  name, yourGrid, attackGrid, score, and 5 Watervehicle ships, as well as public
+  functions fireTorpedo and placeShip which will be overridden/redefined in the
+  inherited classes. The Player class will make use of the Watervehicle class
+  with a "has a" relationship.
+    Two classes, a User class and a Computer class  will inherit from the Player
+  base class with a "is a" relationship. The reason for this inheritance is
+  because both User and Computer will utilize the protected variables, as well
+  as utilizing the fireTorpedo and placeShip functions in different ways, so
+  overriding those functions makes sense. The Computer class will add private
+  member variables for randomRow and randomCol used to generate torpedo shots
+  and ship placements. The User class will not have any additional private
+  variables but will have public functions to checkInput, and display their grid
+  and their attack grid, while obviously the computer does not need displayGrid
+  functions.
+    Each player's grid will be a two dimensional array. The array is chosen because
+  we know the size will be fixed at 10x10 and allows for easy display and
+  comparisons.
