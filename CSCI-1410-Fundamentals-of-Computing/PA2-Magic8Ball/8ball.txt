@@ -1,0 +1,40 @@
+It is certain
+positive
+It is decidedly so
+positive
+Without a doubt
+positive
+Yes definitely
+positive
+You may rely on it
+positive
+As I see it, yes
+positive
+Most likely
+positive
+Outlook good
+positive
+Yes
+positive
+Signs point to yes
+positive
+Reply hazy try again
+vague
+Ask again later
+vague
+Better not tell you now
+vague
+Cannot predict now
+vague
+Concentrate and ask again
+vague
+Don't count on it
+negative
+My reply is no
+negative
+My sources say no
+negative
+Outlook not so good
+negative
+Very doubtful
+negative

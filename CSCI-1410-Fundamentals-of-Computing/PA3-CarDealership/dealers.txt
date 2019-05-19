@@ -1,0 +1,52 @@
+John Elway Dodge
+1
+2
+VIN123
+Dodge
+Ram 1500 Quad Cab
+2017
+45186
+VIN456
+Chevrolet
+Suburban
+2017
+47868
+Tesla Cherry Creek
+25
+1
+VIN789
+Tesla
+Model X
+2017
+105200
+Jocko's Jeep Joint
+3
+3
+VIN989
+Jeep
+Wrangler Unlimited
+2017
+37663
+VIN636
+Jeep
+Grand Cherokee
+2017
+41423
+VIN797
+Jeep
+Wagoneer
+1963
+20984
+Solid Snake's Subaru Lot
+18
+2
+VIN000
+Subaru
+Forester
+2016
+22898
+VIN010
+Subaru
+Outback
+2017
+31298
